@@ -14,7 +14,7 @@ class Player:
         if self.dinheiro < 10:
             return f"{self.nome} Não Tem Dinheiro Suficiente!"
         else:
-            self.dinheiro = max(100, self.dinheiro - 10)
+            self.dinheiro -= 10
             self.fome = min(100, self.fome + 35)
     
     def dormir(self):
@@ -77,13 +77,14 @@ class Player:
                 f"{self.nome} Precisa Dormir!"
     
     def mostrar_status(self):
-        return f'''🙍‍♂️ {self.nome}
-            🔋 Energia: {self.energia}
-            🍖 Fome: {self.fome}
-            🧼 Higiene: {self.higiene}
-            🧠 Mental: {self.mental}
-            🎭 Profissão: {self.profissao}
-            💰 Dinheiro: {self.dinheiro} '''   
+        return f'''
+            👤{self.nome}
+            🔋Energia: {self.energia}
+            🍖Fome: {self.fome}
+            🧼Higiene: {self.higiene}
+            🧠Mental: {self.mental}
+            🎭Profissão: {self.profissao}
+            💰Dinheiro: {self.dinheiro} '''   
 
 if __name__ == "__main__":
 # criar um objeto para o player
