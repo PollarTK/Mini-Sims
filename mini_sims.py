@@ -110,6 +110,26 @@ class Player:
             🧠Mental: {self.mental}
             🎭Profissão: {self.profissao}
             💰Dinheiro: {self.dinheiro} '''   
+            
+class Profissao:
+    def __init__(self, profissao, cargo, salario, energia, fome, higiene, mental):
+        self.__profissao = profissao
+        self.__cargo = cargo
+        self.__salario = salario
+        self.__energia = energia
+        self.__fome = fome
+        self.__higiene = higiene
+        self.__mental = mental
+    
+    def mostrar_informacoes(self):
+        return f'''
+            🎭Profissão: {self.__profissao}
+            🔋Energia: {self.__energia}
+            🍖Fome: {self.__fome}
+            🧼Higiene: {self.__higiene}
+            🧠Mental: {self.__mental}
+            💰Dinheiro: {self.__salario}
+            🛠️Cargo: {self.__cargo}'''   
 
 if __name__ == "__main__":
 # criar um objeto para o player
