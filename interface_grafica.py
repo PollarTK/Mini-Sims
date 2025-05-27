@@ -18,6 +18,18 @@ class SimsApp:
 
         self.btn_comer = tk.Button(root, text="Comer", command=self.botao_comer)
         self.btn_comer.pack(pady = 5)
+        
+        self.btn_dormir = tk.Button(root, text="Dormir", command=self.botao_dormir)
+        self.btn_dormir.pack(pady = 5)
+        
+        self.btn_relaxar = tk.Button(root, text="Relaxar", command=self.botao_relaxar)
+        self.btn_relaxar.pack(pady = 5)
+        
+        self.btn_tomar_banho = tk.Button(root, text="Tomar Banho", command=self.botao_tomar_banho)
+        self.btn_tomar_banho.pack(pady = 5)
+        
+        self.btn_trabalhar = tk.Button(root, text="Trabalhar", command=self.botao_trabalhar)
+        self.btn_trabalhar.pack(pady = 5)
 
         self.label_mensagem = tk.Label(root, text="", font=("Arial", 10))
         self.label_mensagem.pack()
@@ -28,6 +40,26 @@ class SimsApp:
     # método que define a ação que acontece quando precionar o botao comer
     def botao_comer(self):
         mensagem = self.player.comer()
+        self.label_mensagem.config(text=mensagem)
+        self.atualizar_status()
+        
+    def botao_dormir(self):
+        mensagem = self.player.dormir()
+        self.label_mensagem.config(text=mensagem)
+        self.atualizar_status()
+        
+    def botao_relaxar(self):
+        mensagem = self.player.relaxar()
+        self.label_mensagem.config(text=mensagem)
+        self.atualizar_status()
+        
+    def botao_tomar_banho(self):
+        mensagem = self.player.tomar_banho()
+        self.label_mensagem.config(text=mensagem)
+        self.atualizar_status()
+    
+    def botao_trabalhar(self):
+        mensagem = self.player.trabalhar()
         self.label_mensagem.config(text=mensagem)
         self.atualizar_status()
 
